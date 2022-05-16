@@ -1,0 +1,47 @@
+<div class="wrapper">
+  <!-- Header Start -->
+  <div class="header home">
+    <div class="">
+      <div class="header-top row align-items-center">
+        <div class="col-lg-4">
+          <div class="brand">
+            <a style="text-decoration: none;" routerLink="home/Homepage">
+              At Your Service
+              <!-- <img src="../../assets/img/logo.png" alt="Logo"> -->
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <a href="#" class="navbar-brand">MENU</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav ml-auto">
+                <a routerLink="home/Homepage" class="nav-item nav-link">Home</a>
+                <a *ngIf="http.Role=='user'" routerLink="about/aboutus" class="nav-item nav-link">About us</a>
+                <a *ngIf="http.Role==''" routerLink="about/aboutus" class="nav-item nav-link">About us</a>
+                <a *ngIf="http.Role==null" routerLink="about/aboutus" class="nav-item nav-link">About us</a>
+                <a *ngIf="http.Role=='user'" routerLink="Services/Services" class="nav-item nav-link">Services</a>
+                <a *ngIf="http.Role==''" routerLink="Services/Services" class="nav-item nav-link">Services</a>
+                <a *ngIf="http.Role==null" routerLink="Services/Services" class="nav-item nav-link">Services</a>
+                <a *ngIf="http.Role==''" routerLink="contact/contactus" class="nav-item nav-link">Contact</a>
+                <a *ngIf="http.Role=='user'" routerLink="contact/contactus" class="nav-item nav-link">Contact</a>
+                <a *ngIf="http.Role==null" routerLink="contact/contactus" class="nav-item nav-link">Contact</a>
+                <a *ngIf="http.Role==null" routerLink="auth/login" class="nav-link ">Login</a>
+                <a *ngIf="http.Role==''" routerLink="auth/login" class="nav-link ">Login</a>
+                <a *ngIf="http.Role=='user'" (click)="logout()" routerLink="auth/login" class="nav-link ">Logout</a>
+                <a *ngIf="http.Role=='admin'" routerLink="admin/adminpage" class="nav-link ">Dashboard</a>
+                <a *ngIf="http.Role=='admin'" routerLink="admin/adminpage" class="nav-link ">Agents</a>
+                <a *ngIf="http.Role=='admin'" (click)="logout()" routerLink="auth/login" class="nav-link ">Logout</a>
+                <a *ngIf="http.Role=='user'" routerLink="agent/register" class="btn">Be a member!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

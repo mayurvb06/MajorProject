@@ -1,0 +1,36 @@
+a:hover{
+    text-decoration: none;
+    color: #FFD662;
+  }
+  .card-img-top{
+    height: 175px;
+  }
+  .card {
+    margin: 0 auto;
+    float: none; 
+    margin-bottom: 10px;
+    height: 245px;
+  }
+    
+  .page-header {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 90px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.877), rgba(13, 13, 14, 0.538)),url(./../../../assets/img/pageHeader.jpg);
+}
+
+.page-header h2 {
+    color: #FFD662;
+    font-size: 60px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #ffffff;
+}

@@ -1,0 +1,50 @@
+<div class="body">
+    <div style="margin-top: 40px;" class="container" id="container">
+	
+        <h1></h1>
+        <div  class="form-container sign-up-container">
+		<form #signupForm="ngForm" (ngSubmit)="Signup(signupForm.value)" >
+			<h4>Create Account</h4>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" name="name" ngModel placeholder="Name" />
+			<input type="email" name="email" ngModel placeholder="Email" />
+			<input type="number" name="phone" ngModel placeholder="phone" />
+			<input type="password" name="password" ngModel placeholder="Password" />
+			<input type="password" name="cpassword" ngModel placeholder="confirm Password" />
+			<input style="display: none;" type="password" name="role" ngModel="user" placeholder="confirm Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" name="email" ngModel placeholder="Email" />
+			<input type="password" name="password" ngModel placeholder="Password" />
+			<!-- <a href="#">Forgot your password?</a> -->
+            <p></p>
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h3>Already have an account!</h3>
+				<p>Please do login</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h3>Don't have an account!</h3>
+				<p>Enter your details and join with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

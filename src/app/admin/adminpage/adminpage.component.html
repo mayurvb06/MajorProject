@@ -1,0 +1,116 @@
+<div class="wrapper">
+
+<div class="main-content">
+    
+
+    <main>
+        <div class="cards">
+
+            <div class="card-single">
+                <div>
+                    <h1>{{totalOrders}}</h1>
+                    <span>Total Orders</span>
+                </div>
+                <div>
+                    <span class="fa-solid fa-users"></span>
+
+                </div>
+            </div>
+
+            <div class="card-single">
+                <div>
+                    <h1>{{totalUsers}}</h1>
+                    <span>Total Users</span>
+                </div>
+                <div>
+                    <span class="fa-solid fa-users"></span>
+                </div>
+            </div>
+
+            <div class="card-single">
+                <div>
+                    <h1>{{agentLength}}</h1>
+                    <span>Active Agents</span>
+                </div>
+                <div>
+                    <span class="fa-solid fa-users"></span>
+                </div>
+            </div>
+
+            <div class="card-single">
+                <div>
+                    <h1>2</h1>
+                    <span>Total Value</span>
+                </div>
+                <div>
+                    <span class="fa-solid fa-users"></span>
+                </div>
+            </div>
+        </div>
+        <!--Tabla-->
+        <div class="recent-grid">
+            <div class="projects">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Total Enquiries</h3>
+
+                        <button>View More <span class="fas fa-arrow-right">
+                        </span></button>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table width="100%">
+                                <thead>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Order</td>
+                                        <td>Status</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of ordersData">
+                                        <td>{{i.name}}</td>
+                                        <td>{{i.serviceType}}</td>
+                                        <td>
+                                            <span class="status green"></span> Completed
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="customers">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Users</h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div *ngFor="let i of onlyUser" class="customer">
+                            <div class="info">
+                                <div>
+                                    <h4>{{i.name}}</h4>
+                                    <small>{{i.email}}</small>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                           
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+</div>
+</div>

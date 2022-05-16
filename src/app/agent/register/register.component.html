@@ -1,0 +1,104 @@
+<div class="wrapper">
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Be a member</h2>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <form #agentForm="ngForm" (ngSubmit)="register(agentForm.value)" class="container" enctype="multipart/form-data" >
+        <div class="form-row mt-3 mb-3">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Name</label>
+            <input type="text" name="name" class="form-control" ngModel id="inputEmail4">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" name="email" class="form-control" ngModel id="inputEmail4">
+          </div>
+        </div>
+
+        <div class="form-row mt-3 mb-3">
+            <div class="form-group col-md-2">
+                <label for="contact">Contact number</label>
+                <input type="number" name="contact" class="form-control" ngModel id="contact">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" ngModel id="inputCity" name="city">
+              </div>
+              
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control" ngModel name="state">
+                  <option>Maharashtra</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="number" class="form-control" ngModel name="zip" id="inputZip">
+              </div>
+              
+              <div class="form-group col-md-4">
+                <label for="inputState">Service Provide</label>
+                <select id="inputState" class="form-control"  name="subservice" (change)="Change($event)" name="service" ngModel>
+                  <option>Carpenter</option>
+                  <option>AC servicing</option>
+                  <option>Plumber</option>
+                  <option>Painter</option>
+                  <option>Electrician</option>
+                  <option>House Cleaning</option>
+                  <option>TV servicing</option>
+                  <option>Water Purifier servicing</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">Subservices Provide</label>
+                <select id="inputState" class="form-control"  ngModel #subservice>
+                  <option *ngFor="let i of subservicesData">{{i.service_name}}</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="contact">Price starting from</label>
+                <input type="number" class="form-control" ngModel #price id="contact">
+              </div>
+              <div class="col-md-1">
+                <button type="button" (click)="addValues(subservice.value,price.value)" class="btn1">+</button>
+              </div>
+              <table class="table">
+                <thead>
+                    <th style="border-top: none;border-right: none;">Sub service</th>
+                    <th style="border-top: none;border-right: none;">Price</th>
+                    <th style="border-top: none;border-right: none;">Delete</th>
+                </thead>   
+            <tbody>
+                <tr *ngFor="let j of productSubDestination;let i=index">
+                    <td style="border-top: none;border-right: none;">{{j.service}} </td>
+                    <td style="border-top: none;border-right: none;">{{j.price}} </td>
+                    <td style="border-top: none;border-right: none;"><button (click)="deleteSubdest(i)" class="btn btn-outline-danger">-</button></td>
+                </tr>
+            </tbody>   
+               </table>
+              <div class="form-group col-md-12 mt-3 mb-3">
+                <label for="exampleFormControlFile1">Proof of profession</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" ngModel name="image" (change)="onFileChange($event)">
+                <small>e.g Licence,degree or related document</small>
+              </div>
+        </div>
+        <!-- <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" ngModel id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" ngModel id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div> -->
+        <div class="form-row mt-3 mb-3">
+          
+        </div>
+        <button type="submit" class="btn1 mt-3">Register</button>
+      </form>
+</div>
