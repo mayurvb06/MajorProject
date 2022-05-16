@@ -16,18 +16,35 @@ export class RegisterComponent implements OnInit {
   File1: any = {};
   images: any = [];
   FileName: any = '';
+  urllink:any="./../../../assets/img/carpenter.jpg"
   onFileChange(event: any) {
-    this.File = event.target.files[0];
-    this.File1 = new FormData();
-    this.File1.append('file', this.File, 'Image1.jpg');
-    console.log(this.File1);
-    let fileSize = this.File.size / 1024;
-    console.log(fileSize);
-    this.images.push(this.File1);
-    console.log(this.images[0].name);
-    this.FileName = this.File.name;
-    console.log('Selected File is ' + this.File1);
-    console.log(this.File);
+    // var reader = new FileReader();
+    // reader.readAsDataURL(event.target.files[0]);
+    // console.log(event.target.result);
+    
+    // this.File = event.target.files[0];
+    // console.log(this.File);
+
+    if(event.target.files){
+      var reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload=(event:any)=>{
+        this.urllink=event.target.result
+        console.log(this.urllink);
+        
+      }
+    }
+    
+    // this.File1 = new FormData();
+    // this.File1.append('file', this.File);
+    // console.log(this.File1);
+    // let fileSize = this.File.size / 1024;
+    // console.log(fileSize);
+    // this.images.push(this.File1);
+    // console.log(this.images[0].name);
+    // this.FileName = this.File.name;
+    // console.log('Selected File is ' + this.File1);
+    // console.log(this.File);
   }
   RegisterData: any = {};
 
@@ -127,7 +144,7 @@ export class RegisterComponent implements OnInit {
       city: data.city,
       contact: data.contact,
       email: data.email,
-      image: this.File,
+      image: this.urllink,
       name: data.name,
       service: data.service,
       state: data.state,

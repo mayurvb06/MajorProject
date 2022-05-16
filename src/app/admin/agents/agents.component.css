@@ -1,0 +1,41 @@
+.item-card{
+    width: 70%;
+    margin: auto;
+    margin-top: 35px;
+}
+.item-card h5{
+    background-color: #3f57df;
+    color: white;
+}
+.button-link{
+    width: 119px;
+}
+.cardItem{
+    display: flex;
+    border: 1px solid rgb(138, 138, 213);
+
+}
+
+.cardItem img{
+    display: flex;
+    width: 260px;
+    margin: 16px;
+}
+
+.card-info{
+    margin-left: 34px;
+}
+
+
+.card-info a {
+        margin-right: 34px;
+        background-color: #dde3fe;
+        color: blue;
+        width: inherit;
+}
+
+.card-info a span{
+    margin: 12px;
+    font-size: 20px;
+    font-weight: 700;
+}

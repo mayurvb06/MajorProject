@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpRequest} from '@angular/common/http';
+
+function _window():any{
+  return window;
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
+
+get nativeWindow():any{
+  return _window();
+}
 
   constructor(private http:HttpClient) {
     // this.token=localStorage.getItem("token");
@@ -53,12 +63,7 @@ role:any="";
 
   registerAgent(data:any){
     console.log("In service");
-    
     console.log(data);
-    
-    const formdata: FormData= new FormData();
-    formdata.append('file',data.image);
-    data.image=formdata;
     // data.email="mayurbhakare";
     console.log(data);
     
