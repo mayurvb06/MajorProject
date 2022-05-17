@@ -1,1 +1,122 @@
-<p>description works!</p>
+<div class="container">
+    <!--Product-->  
+         <div *ngIf="description!=null" class="row justify-content-center">
+             <!--Product Image-->
+             <div class="col-md-6 col-sm-12 col-sm-12">
+                 <div class="container py-5">
+                     <div class="card text-black border-0">
+                        <img src="https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/how-to-install-a-door-lock-step-1.jpg" class="card-img-top img-fluid rounded mt-5" alt="Apple Computer"/>
+                     </div>
+                 </div>
+
+                 <div class="services">
+                     <h1 style="text-align: center;" class="fs-1">Select Services</h1>
+                     <p style="text-align: center;margin-top: -10px;">(Click on services you want)</p>
+                     <div class="row">
+                         <div  *ngFor="let i of description.subservice" class="col-md-6 mb-3">
+                             <input style="width: 80%;display: none;" type="text" #service value={{i.service}} name="services" ngModel>
+                             <input style="width: 80%;display: none;" type="text" #price value={{i.price}} name="services" ngModel>
+                             <button class="btn1" (click)="getVal(service.value,price.value)"> {{i.service}} </button>
+                         </div>
+                     </div>
+                     <table class="table mb-5">
+                        <tbody>
+                            <tr></tr>
+                           <tr>
+                               <th style="border-top: 0px solid blue;border-bottom: 1px solid grey;">Services</th>
+                               <th style="border-top: 0px solid blue;border-bottom: 1px solid grey;">Prices</th>
+                               <th style="border-top: 0px solid blue;border-bottom: 1px solid grey;">Delete</th>
+                           </tr>
+                           <tr *ngFor="let i of servicesData;let j=index">
+                            <td style="border-bottom: 1px solid grey;">{{i.service}}</td>
+                            <td style="border-bottom: 1px solid grey;">{{i.price}}</td>
+                            <td style="border-bottom: 1px solid grey;"><button (click)="deleteSubdest(j)" class="btn btn-outline-danger">-</button></td>
+                        </tr>
+                          
+                        </tbody>
+                        
+                    </table>
+                    <div class="button">
+                        <button class="btn2" (click)="getSum()" >Get Total</button>
+                        <p class="fs-1">Total : {{price}} </p>
+
+                    </div>
+                </div>
+
+             </div>
+
+             <!--Product Detail-->
+             <div  class="col-md-6 col-sm-12 col-sm-12">
+                <div class="container py-5">
+                    <div class="card p-4 border-0">
+                        <div class="text-justify">
+                            <h2>{{description.service}}</h2>
+                            <p>Here we provide quality services along with price as mentioned below from which you can select desired service/services :-</p>
+                            
+                        </div>
+                        <table class="table mb-5">
+                            <tbody>
+                               <tr>
+                                   <th>Services</th>
+                                   <th>Prices</th>
+                               </tr>
+                               <tr *ngFor="let i of description.subservice">
+                                   <td>{{i.service}}</td>
+                                   <td>{{i.price}}</td>
+                               </tr>
+                              
+                            </tbody>
+                        </table>
+                        <div>
+
+                            <p class="fw-bold">{{description.service}} details</p>
+                            <table class="table">
+                                <tbody>
+                                   <tr style="border-top: 0px solid black;">
+                                       <td>Duration</td>
+                                       <td>starting from 30 minutes</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Turnaround Time</td>
+                                       <td>nearly 2.5 hours</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Pricing</td>
+                                       <td>Fixed Pricing</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="container book">
+                        <div class="card ">
+                            <div class="card-title card-header text-center">
+                              You are just a step away !
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                      <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Number">
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter address">
+                                      </div>
+                                    <div class="form-group">
+                                      <input type="text" id="exampleInputPassword1" placeholder="Total Price" value={{price}} name="price" ngModel>
+                                    </div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a href="#" class="btn btn-primary w-100">Book Now</a>
+                                    </div>
+                                  </form>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+             </div>
+         </div>
+    </div>

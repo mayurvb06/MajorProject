@@ -1,0 +1,60 @@
+<!-- <p>list works!</p>
+<p>
+    Hii {{data}}
+</p> -->
+<div class="wrapper">
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>{{data}}</h3>
+                </div>
+                <!-- <div class="col-12">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row py-2 mb-3" *ngFor="let i of serviceAgents">
+            <!--card 1-->
+            <div class="col-md-12 col-sm-12" style="border-bottom: 1px solid #D3D3D3;">
+                <div class="row p-2">
+                    <!-- <div class="col-md-3 col-sm-12 text-center">
+                        <img class="rounded-circle img-fluid mx-auto d-block"
+                            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
+                            style="width: 100px;" />
+                    </div> -->
+                    <div class="col-md-9 col-sm-12">
+                        <h5>{{i.name}}</h5>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i style="padding-right: 5px;" class="fa fa-briefcase"></i> {{i.service}}</li>
+                            <li style="padding-left: 10px;" class="list-inline-item"><i style="padding-right: 5px" class="fa fa-envelope"></i> {{i.email}}</li>
+                            <li style="padding-left: 10px;" class="list-inline-item"><i style="padding-right: 5px" class="fa fa-phone"></i> {{i.contact}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <input style="display: none;" type="text" name="id" #id value={{i._id}} ngModel>
+                        <a class="btn btn-primary" (click)="getVal(id.value)">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <!--card 1-->
+
+        </div>
+       
+        <!--Next Buttons-->
+        <!-- <div class="text-center mt-3 mt-sm-3">
+        <ul class="pagination justify-content-center mb-0">
+          <li class="page-item disabled"> <span class="page-link">Prev</span> </li>
+          <li class="page-item active" aria-current="page"><span class="page-link">1 </span> <span class="sr-only">(current)</span></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">25</a></li>
+          <li class="page-item"> <a class="page-link" href="#">Next</a> </li>
+        </ul>
+      </div> -->
+    </div>
+</div>

@@ -1,0 +1,89 @@
+.text-justify{
+    text-align: justify; 
+    text-justify: inter-word; 
+ }
+ .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50%;
+   }
+ 
+   .book input{
+      width: 100%;
+      border: 0px solid black;
+      border-bottom: 2px solid grey!important;
+      height: 50px;
+      font-size: 18px;
+      width: 100%;
+   }
+   
+   .book input:focus{
+     border: 0px solid blue;
+     outline: 0px;
+
+   }
+   .book{
+     width: 80%;
+   }
+
+   .btn1 {
+    /* height: 40px; */
+    
+    padding: 0 5px;
+    height: 70px;
+    width: 98%;
+    color: #000000;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: #FFD662;
+    border-radius: 5px;
+    transition: .3s;
+    border: 0px solid transparent;
+    margin-top: 30px;
+}
+
+.btn1:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.btn1:focus{
+  outline: 0px solid #00539C;
+} 
+
+.btn2 {
+  /* height: 40px; */
+  padding: 0 5px;
+  height: 40px;
+  width: 15%;
+  color: #000000;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #FFD662;
+  border-radius: 5px;
+  transition: .3s;
+  border: 0px solid transparent;
+  margin-top: 30px;
+}
+
+.btn2:hover {
+  color: #ffffff;
+  background: #00539C;
+}
+
+.btn2:focus{
+outline: 0px solid #00539C;
+} 
+
+.button{
+  margin-top: -50px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.button p{
+  margin-top: 40px;
+  padding-left: 30px;
+  /* padding-bottom: 20px; */
+}

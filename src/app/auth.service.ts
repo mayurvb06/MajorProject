@@ -16,22 +16,18 @@ get nativeWindow():any{
 }
 
   constructor(private http:HttpClient) {
-    // this.token=localStorage.getItem("token");
-    // this.role=localStorage.getItem("role");
-    // console.log(this.token);
-    // console.log(this.role);
-    
+
 
 
    }
 
    Role:any=localStorage.getItem('role');
-  //  getToken(){
-  //    return this.token;
-  //  }
-  //  setToken(token:any){
-  //   this.token=token;
-  //  }
+   getData(){
+     return this.token;
+   }
+   setData(data:any){
+    this.token=data;
+   }
 token:any="";
 role:any="";
 
@@ -118,4 +114,12 @@ role:any="";
     return this.http.get(this.url+"/waterpurifier");
   }
 
+  getAgent(data:any){
+    return this.http.post(this.url+"/getAgent",data);
+  }
+approveAgent(data:any){
+  console.log("calling approve agent");
+  
+  return this.http.post(this.url+"/agentApprove",data);
+}
 }

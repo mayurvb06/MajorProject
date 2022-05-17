@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AuthService } from 'src/app/auth.service';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor(private http:AuthService) { }
+  constructor(private http:AuthService,private route:Router) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +17,13 @@ export class ServicesComponent implements OnInit {
   getServices(){
     
   }
-
+  getVal(val:any){
+    // this.http.setData(val);
+    localStorage.setItem("service",val);
+    console.log(val);
+    this.route.navigate(["/Services/serviceList"]);
+    return this.http.getAllAgents().subscribe(res=>{
+      console.log(res);
+    })
+  }
 }

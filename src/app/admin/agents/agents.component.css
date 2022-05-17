@@ -18,8 +18,8 @@
 
 .cardItem img{
     display: flex;
-    width: 260px;
-    margin: 16px;
+    width: 460px;
+    margin: 1px;
 }
 
 .card-info{
@@ -38,4 +38,28 @@
     margin: 12px;
     font-size: 20px;
     font-weight: 700;
+}
+
+
+.page-header {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 90px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.877), rgba(13, 13, 14, 0.538)),url(./../../../assets/img/pageHeader.jpg);
+}
+
+.page-header h2 {
+    color: #FFD662;
+    font-size: 60px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #ffffff;
 }

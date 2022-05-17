@@ -44,7 +44,7 @@ export class AdminpageComponent implements OnInit {
       console.log(this.agentLength);
       let count = 0;
       for (let i = 0; i < this.agentsData.length; i++) {
-        if (this.agentsData[i].status = 'Active') {
+        if (this.agentsData[i].status == 'Active') {
           count = count + 1;
         }
       }
@@ -59,14 +59,14 @@ onlyUser:any=[];
       this.users = res;
       this.usersData = this.users.userdata;
       console.log(this.usersData);
-      this.totalUsers=this.usersData.length;
+      // this.totalUsers=this.usersData.length;
       for(let i=0;i<this.usersData.length;i++){
         if(this.usersData[i].role=='user'){
           this.onlyUser.push(this.usersData[i]);
         }
       }
       console.log(this.onlyUser);
-      
+      this.totalUsers=this.onlyUser.length;
     });
   }
 }

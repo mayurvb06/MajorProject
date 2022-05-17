@@ -1,7 +1,9 @@
 a:hover{
     text-decoration: none;
     color: #FFD662;
+    cursor: pointer;
   }
+  a{color: #00539C;}
   .card-img-top{
     height: 175px;
   }

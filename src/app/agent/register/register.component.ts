@@ -149,7 +149,8 @@ export class RegisterComponent implements OnInit {
       service: data.service,
       state: data.state,
       zip: data.zip,
-      subservice:this.productSubDestination
+      subservice:this.productSubDestination,
+      userid:localStorage.getItem("userId")
     };
     // console.log(this.RegisterData);
     this.http.registerAgent(this.RegisterData).subscribe((res) => {

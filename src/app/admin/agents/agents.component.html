@@ -1,6 +1,36 @@
-<div class="card item-card">
-    <h5 class="card-header">Pending Agents's Applications</h5>
-        <div class="card-body cardItem">
+<div class="wrapper">
+    
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+          <h2>Pending Agents' Applications</h2>
+                </div>
+                <!-- <div class="col-12">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+<div style="border: 0px solid black;" class="card item-card">
+        <div *ngFor="let i of pendingAgents" class="card-body cardItem mb-5">
+            <img class="card-img-left" src="{{i.image}}" alt="Card image cap" />
+            <div class="card-info">
+                <h4 class="card-title">Agent : {{i.name}}</h4>
+                <p class="card-text">Email Id : {{i.email}} </p>
+                <p class="card-text">Contact No. : {{i.contact}} </p>
+                <p class="card-text">Service Name : {{i.service}} </p>
+                <p class="card-text">Price : Rs. {{i.subservice[0].price}}  </p>
+                <p class="card-text">Location : {{i.city}}</p>
+                <input style="display: none;" type="text" #uId value={{i.userid}} ngModel>
+                <input style="display: none;" type="text" #aId value={{i._id}} ngModel>
+                <a (click)="getApprove(uId.value,aId.value)" class="btn btn-primary button-link"><i class="fa fa-check" style="font-size:25px;color:green"></i><span>Accept</span></a>
+                <a class="btn btn-primary button-link"><i class="fa fa-times" style="font-size:25px;color:red"></i><span>Reject</span></a>
+            </div>
+        </div>
+        <!-- <div class="card-body cardItem">
             <img class="card-img-left" src="./ignorefolder/about_0023.png" alt="Card image cap" />
             <div class="card-info">
                 <h4 class="card-title">Agents Name</h4>
@@ -12,18 +42,7 @@
                 <a href="#" class="btn btn-primary button-link"><i class="fa fa-check" style="font-size:25px;color:green"></i><span>Accept</span></a>
                 <a href="#" class="btn btn-primary button-link"><i class="fa fa-times" style="font-size:25px;color:red"></i><span>Reject</span></a>
             </div>
-        </div>
-        <div class="card-body cardItem">
-            <img class="card-img-left" src="./ignorefolder/about_0023.png" alt="Card image cap" />
-            <div class="card-info">
-                <h4 class="card-title">Agents Name</h4>
-                <p class="card-text">Email Id :</p>
-                <p class="card-text">Contact No. : </p>
-                <p class="card-text">Service Name : </p>
-                <p class="card-text">Price : Rs. </p>
-                <p class="card-text">Location : </p>
-                <a href="#" class="btn btn-primary button-link"><i class="fa fa-check" style="font-size:25px;color:green"></i><span>Accept</span></a>
-                <a href="#" class="btn btn-primary button-link"><i class="fa fa-times" style="font-size:25px;color:red"></i><span>Reject</span></a>
-            </div>
-        </div>
+        </div> -->
+</div>
+
 </div>
