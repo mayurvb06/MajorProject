@@ -48,8 +48,13 @@ errcode:any;
     localStorage.setItem("role",this.role);
     if (this.token) {
       this.auth.auth()
-      console.log("Hiii welcome to login");
+      console.log(this.loginRes.message);
+      if(this.loginRes.message=='login  as user'){
+        alert("your login is successfull....")
     this.router.navigate(["/home/Homepage"]);
+      }else{
+        alert("Oops something went wrong try again....")
+      }
     }
     },(error=>{
       this.errcode=error.status;
@@ -67,12 +72,19 @@ errcode:any;
     
   }
   signupData:any={}
+  signup:any;
   Signup(data:any){
     this.signupData=data;
     console.log(this.signupData);
     this.auth.userSignup(this.signupData).subscribe(res=>{
       console.log(res);
-      
+      this.signup=res;
+      if(this.signup.message=="signup successfully"){
+        alert("You have signed up successfully !!!!");
+      }
+      else{
+        alert("oops something went wrong try again.....")
+      }
     })
     
   }

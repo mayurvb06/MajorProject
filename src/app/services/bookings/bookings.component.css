@@ -1,0 +1,249 @@
+
+.page-header {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 90px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.877), rgba(13, 13, 14, 0.538)),url(./../../../assets/img/pageHeader.jpg);
+}
+
+.page-header h2 {
+    color: #FFD662;
+    font-size: 50px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+
+.body {
+    color: #666666;
+    background: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+  
+  h2 {
+    font-weight: 100;
+  }
+  
+  h4 {
+    display: inline-block;
+    font-weight: 900;
+  }
+  
+  .btn:focus {
+    box-shadow: none;
+  }
+  
+  .section-header {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+  }
+  
+  .section-header::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 3px;
+    left: calc(50% - 50px);
+    bottom: 0;
+    background: linear-gradient(to left, #ffd662, #00539c, #ffd662);
+    border-radius: 100%;
+  }
+  
+  .section-header::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 9px;
+    left: calc(50% - 10px);
+    bottom: -3px;
+    background: #00539c;
+    border-radius: 5px;
+  }
+  
+  .section-header p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .section-header h2 {
+    color: #00539c;
+    font-size: 50px;
+    font-weight: 100;
+  }
+  
+  .section-header.left {
+    text-align: left;
+  }
+  
+  .section-header.left::before {
+    width: 60px;
+    left: 0;
+    background: linear-gradient(to left, #ffd662, #00539c, #00539c);
+    border-radius: 0 100% 100% 0;
+  }
+  
+  .section-header.left::after {
+    left: 0;
+    border-radius: 5px;
+  }
+  
+  .contact {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+  }
+  
+  .contact .faqs {
+    padding: 0;
+  }
+  
+  @media (max-width: 767.98px) {
+    .contact .faqs {
+      margin-bottom: 30px;
+    }
+    .contact .contact-form .btn {
+      width: 100%;
+    }
+  }
+  
+  .contact .contact-form input {
+    height: 60px;
+    border-radius: 5px;
+  }
+  
+  .contact .contact-form .btn {
+    height: 60px;
+    width: 200px;
+    padding: 0 20px;
+    color: #000000;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: #ffd662;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .contact .contact-form .btn:hover {
+    background-color: #ffffff;
+    color: #00539c;
+  }
+  
+  .payment-btn {
+    float: right;
+  }
+  .payment-btn {
+    height: 40px;
+    width: 200px;
+    padding: 0 20px;
+    color: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #ffd662;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .payment-btn:hover {
+    background-color: #ffffff;
+    color: #00539c;
+  }
+  .cancel-btn {
+    float: left;
+  }
+  
+  #orders-form {
+    text-align: center;
+    background-color: #00539c;
+    padding: 45px 30px 80px 30px;
+    border-radius: 5px;
+    box-shadow: 5px;
+  }
+  
+  .total-amount {
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  
+  .price-tag,
+  .price {
+    display: inline-block;
+    float: left;
+    margin-right: 100px;
+    font-size: 20px;
+  }
+  
+  .price-tag {
+    font-weight: 1000;
+  }
+  
+  .details {
+    background-color: #3d8bd0;
+    padding: 30px;
+    height: 50vh;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  table {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  table thead tr {
+    border-bottom: 3px solid #666666;
+    padding: 20px 20px;
+  }
+  
+  th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  table tbody tr {
+    border-bottom: 1px solid #666666;
+    padding-top: 10px;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #666666;
+  }
+  
+  td {
+    padding: 20px;
+  }
+  
+  .customer-name,
+  .agent-name {
+    margin-bottom: 20px;
+  }
+  
+  .booked-services {
+    margin-bottom: 20px;
+  }
+  
+  .delete-service {
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .delete-service:hover {
+    border: 0.5px solid gray;
+  }
+  

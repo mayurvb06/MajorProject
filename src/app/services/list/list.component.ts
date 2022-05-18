@@ -27,42 +27,42 @@ getAgents(){
     console.log(this.allAgents);
     if (this.data=='Carpenters') {
       for (let i = 0; i < this.allAgents.length; i++) {
-        if(this.allAgents[i].service=='Carpenter')
+        if(this.allAgents[i].service=='Carpenter' && this.allAgents[i].status=='Active')
         this.serviceAgents.push(this.allAgents[i]);
       }
     }if (this.data=='House Cleaning') {
       for (let i = 0; i < this.allAgents.length; i++) {
-        if(this.allAgents[i].service=='House Cleaning')
+        if(this.allAgents[i].service=='House Cleaning' && this.allAgents[i].status=='Active')
         this.serviceAgents.push(this.allAgents[i]);
       }
     }if (this.data=='AC Servicing') {
       for (let i = 0; i < this.allAgents.length; i++) {
-        if(this.allAgents[i].service=='AC servicing')
+        if(this.allAgents[i].service=='AC servicing' && this.allAgents[i].status=='Active')
         this.serviceAgents.push(this.allAgents[i]);
       }
     }if (this.data=='Plumbing') {
       for (let i = 0; i < this.allAgents.length; i++) {
-        if(this.allAgents[i].service=='Plumber')
+        if(this.allAgents[i].service=='Plumber' && this.allAgents[i].status=='Active')
         this.serviceAgents.push(this.allAgents[i]);
       }
     }if (this.data=='Painting') {
       for (let i = 0; i < this.allAgents.length; i++) {
-        if(this.allAgents[i].service=='Painter')
+        if(this.allAgents[i].service=='Painter' && this.allAgents[i].status=='Active')
         this.serviceAgents.push(this.allAgents[i]);
       }
     }if (this.data=='Electrician') {
       for (let i = 0; i < this.allAgents.length; i++) {
-        if(this.allAgents[i].service=='Electrician')
+        if(this.allAgents[i].service=='Electrician' && this.allAgents[i].status=='Active')
         this.serviceAgents.push(this.allAgents[i]);
       }
     }if (this.data=='TV Servicing') {
       for (let i = 0; i < this.allAgents.length; i++) {
-        if(this.allAgents[i].service=='TV servicing')
+        if(this.allAgents[i].service=='TV servicing' && this.allAgents[i].status=='Active')
         this.serviceAgents.push(this.allAgents[i]);
       }
     }if (this.data=='Water Purifier Servicing') {
       for (let i = 0; i < this.allAgents.length; i++) {
-        if(this.allAgents[i].service=='Water Purifier servicing')
+        if(this.allAgents[i].service=='Water Purifier servicing' && this.allAgents[i].status=='Active')
         this.serviceAgents.push(this.allAgents[i]);
       }
     }

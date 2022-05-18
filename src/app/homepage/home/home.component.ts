@@ -15,4 +15,7 @@ export class HomeComponent implements OnInit {
   route(){
     this.route1.navigate(["/about/aboutus"])
   }
+  service(){
+    this.route1.navigate(["/Services/services"]);
+  }
 }

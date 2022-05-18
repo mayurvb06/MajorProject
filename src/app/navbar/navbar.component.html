@@ -28,16 +28,18 @@
                 <a *ngIf="http.Role=='user'" routerLink="Services/services" class="nav-item nav-link">Services</a>
                 <a *ngIf="http.Role==''" routerLink="Services/services" class="nav-item nav-link">Services</a>
                 <a *ngIf="http.Role==null" routerLink="Services/services" class="nav-item nav-link">Services</a>
-                <a *ngIf="http.Role==''" routerLink="contact/contactus" class="nav-item nav-link">Contact</a>
+                <!-- <a *ngIf="http.Role==''" routerLink="contact/contactus" class="nav-item nav-link">Contact</a>
                 <a *ngIf="http.Role=='user'" routerLink="contact/contactus" class="nav-item nav-link">Contact</a>
                 <a *ngIf="http.Role==null" routerLink="contact/contactus" class="nav-item nav-link">Contact</a>
-                <a *ngIf="http.Role=='Agent'" routerLink="contact/contactus" class="nav-item nav-link">Contact</a>
+                <a *ngIf="http.Role=='Agent'" routerLink="contact/contactus" class="nav-item nav-link">Contact</a> -->
+                <a *ngIf="http.Role=='user'" routerLink="Services/bookings" class="nav-link ">Bookings</a>
                 <a *ngIf="http.Role==null" routerLink="auth/login" class="nav-link ">Login</a>
                 <a *ngIf="http.Role==''" routerLink="auth/login" class="nav-link ">Login</a>
                 <a *ngIf="http.Role=='user'" (click)="logout()" routerLink="auth/login" class="nav-link ">Logout</a>
                 <a *ngIf="http.Role=='admin'" routerLink="admin/adminpage" class="nav-link ">Dashboard</a>
                 <a *ngIf="http.Role=='admin'" routerLink="admin/agents" class="nav-link ">Agents</a>
                 <a *ngIf="http.Role=='admin'" (click)="logout()" routerLink="auth/login" class="nav-link ">Logout</a>
+                <a *ngIf="http.Role=='Agent'" routerLink="agent/enquiries" class="nav-link ">Enquiries</a>
                 <a *ngIf="http.Role=='Agent'" (click)="logout()" routerLink="auth/login" class="nav-link ">Logout</a>
                 <a *ngIf="http.Role=='user'" routerLink="agent/register" class="nav-link ">Be a member!</a>
               </div>

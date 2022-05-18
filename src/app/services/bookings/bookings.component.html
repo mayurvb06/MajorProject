@@ -1,0 +1,102 @@
+<div class="wrapper">
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Bookings</h2>
+                </div>
+                <!-- <div class="col-12">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="body">
+        <div *ngFor="let i of orderData" class="contact mb-3">
+            <div class="container">
+                <!-- <div class="section-header">
+                    <p>Orders</p>
+                    <h2>Book Your Service</h2>
+                </div> -->
+                <div class="details">
+                    <div class="customer-name">
+                        <h5>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                        
+                        &nbsp;&nbsp;{{i.name}}<br /></h5>
+                    </div>
+                    <div class="agent-name">
+                        <h5>Service Provided&nbsp;&nbsp;:&nbsp;&nbsp;{{i.service}}</h5>
+                        
+                    </div>
+                    <div class="booked-services">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h5>Status</h5>
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Status</td>
+                                    <td>
+                                        <!-- <button class="delete-service"><a href=""><i class="fa fa-check"
+                                                    style="font-size:18px;color:green"></i></a></button> -->
+                                                    {{i.status}}
+                                    </td>
+                                </tr>
+    
+                                <!-- <tr>
+                                    <td>service2</td>
+                                    <td> 599</td>
+                                    <td>
+                                        <button class="delete-service"><a href=""><i class="fa fa-check"
+                                            style="font-size:18px;color:green"></i></a></button>
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="total-amount">
+                        <div class=" price-tag">
+                            <h4>Total Amount</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+                        </div>
+                        <div class=" price">{{i.price}}</div>
+                        <input type="text" style="display: none;" value="{{i.price}}" #price>
+                        <!-- <button (click)="getVal(price.value)" class="btn payment-btn" type="submit">Accept</button> -->
+                        <button style="margin-left: 30px;" (click)="pay()" class="btn payment-btn" type="submit">
+                            Make Payment
+                        </button>
+                    </div>
+                </div>
+                <!-- <div id="orders-form">
+                    <div class="col-md-12">
+                        <div class="contact-form">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <input type="number" class="form-control" placeholder="Contact Number"
+                                            required="required" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Address" required="required" />
+                                </div>
+    
+                                <button class="btn cancel-btn" type="submit">Cancel</button>
+    
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+</div>

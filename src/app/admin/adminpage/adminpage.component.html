@@ -12,7 +12,6 @@
                     <span>Total Orders</span>
                 </div>
                 <div>
-                    <span class="fa-solid fa-users"></span>
 
                 </div>
             </div>
@@ -23,7 +22,6 @@
                     <span>Total Users</span>
                 </div>
                 <div>
-                    <span class="fa-solid fa-users"></span>
                 </div>
             </div>
 
@@ -33,17 +31,15 @@
                     <span>Active Agents</span>
                 </div>
                 <div>
-                    <span class="fa-solid fa-users"></span>
                 </div>
             </div>
 
             <div class="card-single">
                 <div>
-                    <h1>2</h1>
-                    <span>Total Value</span>
+                    <h1>Admin</h1>
+                    <span>Dashboard</span>
                 </div>
                 <div>
-                    <span class="fa-solid fa-users"></span>
                 </div>
             </div>
         </div>
@@ -71,9 +67,9 @@
                                 <tbody>
                                     <tr *ngFor="let i of ordersData">
                                         <td>{{i.name}}</td>
-                                        <td>{{i.serviceType}}</td>
+                                        <td>{{i.service}}</td>
                                         <td>
-                                            <span class="status green"></span> Completed
+                                            {{i.status}}
                                         </td>
                                     </tr>
                                     

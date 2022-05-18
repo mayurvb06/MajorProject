@@ -27,7 +27,7 @@
                 <input style="display: none;" type="text" #uId value={{i.userid}} ngModel>
                 <input style="display: none;" type="text" #aId value={{i._id}} ngModel>
                 <a (click)="getApprove(uId.value,aId.value)" class="btn btn-primary button-link"><i class="fa fa-check" style="font-size:25px;color:green"></i><span>Accept</span></a>
-                <a class="btn btn-primary button-link"><i class="fa fa-times" style="font-size:25px;color:red"></i><span>Reject</span></a>
+                <a (click)="reject(aId.value)" class="btn btn-primary button-link"><i class="fa fa-times" style="font-size:25px;color:red"></i><span>Reject</span></a>
             </div>
         </div>
         <!-- <div class="card-body cardItem">

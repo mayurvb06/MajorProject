@@ -122,4 +122,24 @@ approveAgent(data:any){
   
   return this.http.post(this.url+"/agentApprove",data);
 }
+
+placeOrder(data:any){
+  return this.http.post(this.url+"/orderPlace",data);
+}
+rejectAgent(data:any){
+  return this.http.post(this.url+"/agentRejected",data);
+}
+
+getOrdersByagent(data:any){
+  return this.http.post(this.url+"/agentOrders",data); 
+}
+orderInProgress(data:any){
+  return this.http.post(this.url+"/orderInProgress",data);
+}
+orderComplete(data:any){
+  return this.http.post(this.url+"/orderCompleted",data);
+}
+userOrders(data:any){
+  return this.http.post(this.url+"/userOrders",data);
+}
 }
